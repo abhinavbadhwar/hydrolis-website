@@ -5,7 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hydrolis | APRS </title>
 <meta name="description" content="Hydrolis Packaged Drinking Water by APRS . Safe, clean, and refreshing bottled water. Bulk orders and custom labels available.">
-
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#0077b6">
+<link rel="apple-touch-icon" href="/icon-192.png">
 <style>
 
 /* GENERAL */
@@ -717,6 +719,43 @@ document.querySelectorAll('.hero h1, .hero p, .btn, .feature, .product, .offer, 
 observer.observe(el);
 });
 </script>
-
+<script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("/service-worker.js")
+      .then(() => console.log("Service Worker Registered"))
+      .catch(err => console.log("Service Worker Failed", err));
+  }
+  </script>
+  <script>
+    let deferredPrompt;
+    
+    window.addEventListener("beforeinstallprompt", (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+    
+      const installBtn = document.createElement("button");
+      installBtn.innerText = "📲 Install App";
+    
+      installBtn.style.position = "fixed";
+      installBtn.style.bottom = "90px";
+      installBtn.style.right = "20px";
+      installBtn.style.padding = "12px 18px";
+      installBtn.style.background = "#0077b6";
+      installBtn.style.color = "#fff";
+      installBtn.style.border = "none";
+      installBtn.style.borderRadius = "25px";
+      installBtn.style.fontWeight = "bold";
+      installBtn.style.zIndex = "999";
+    
+      document.body.appendChild(installBtn);
+    
+      installBtn.addEventListener("click", () => {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then(() => {
+          deferredPrompt = null;
+        });
+      });
+    });
+    </script>
 </body>
 </html>
