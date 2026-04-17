@@ -545,7 +545,45 @@ z-index: 9999;
 .install-btn:hover {
 background: #00b4d8;
 }
+.loyalty {
+  padding: 60px 6%;
+  text-align: center;
+  background: linear-gradient(135deg, #023e8a, #0077b6);
+  color: white;
+}
 
+.loyalty h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.loyalty-card {
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  color: #333;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.offer-line {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.stamp-row {
+  margin: 25px 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 28px;
+}
+
+.note {
+  font-size: 13px;
+  color: #666;
+}
 </style>
 </head>
 
@@ -568,6 +606,29 @@ background: #00b4d8;
 <h1>Pure Water, Pure Life</h1>
 <p>Premium packaged drinking water by APRS . Clean, safe, and refreshing hydration.</p>
 <a href="#products" class="btn">Explore Bottles</a>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+<div class="feature">
+<h3>Advanced Filtration</h3>
+<p>Multi-stage purification removes impurities.</p>
+</div>
+
+<div class="feature">
+<h3>RO + UV Purification</h3>
+<p>Protects against harmful bacteria.</p>
+</div>
+
+<div class="feature">
+<h3>Mineral Balance</h3>
+<p>Essential minerals for great taste.</p>
+</div>
+
+<div class="feature">
+<h3>Trusted Quality</h3>
+<p>Reliable packaged drinking water.</p>
+</div>
 </section>
 <section class="custom-info">
   <div class="custom-box">
@@ -595,29 +656,35 @@ background: #00b4d8;
   
   </div>
   </section>
-<!-- FEATURES -->
-<section class="features">
-<div class="feature">
-<h3>Advanced Filtration</h3>
-<p>Multi-stage purification removes impurities.</p>
-</div>
+<section class="loyalty">
+  <h2>🎁 Hydrolis Loyalty Card</h2>
 
-<div class="feature">
-<h3>RO + UV Purification</h3>
-<p>Protects against harmful bacteria.</p>
-</div>
+  <div class="loyalty-card">
+    
+    <p class="offer-line">
+      Buy <b>5 Lots</b> → Get <b>1 Stamp</b>
+    </p>
 
-<div class="feature">
-<h3>Mineral Balance</h3>
-<p>Essential minerals for great taste.</p>
-</div>
+    <p class="offer-line">
+      Collect <b>7 Stamps</b> → Win <b>Surprise Gift 🎉</b>
+    </p>
 
-<div class="feature">
-<h3>Trusted Quality</h3>
-<p>Reliable packaged drinking water.</p>
-</div>
+    <div class="stamp-row">
+      <span>💧</span>
+      <span>💧</span>
+      <span>💧</span>
+      <span>💧</span>
+      <span>💧</span>
+      <span>💧</span>
+      <span>🎁</span>
+    </div>
+
+    <p class="note">
+      Ask our team to stamp your card on every eligible purchase.
+    </p>
+
+  </div>
 </section>
-
 <!-- PRODUCTS -->
 <section class="products" id="products">
 
